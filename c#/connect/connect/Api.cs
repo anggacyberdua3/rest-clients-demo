@@ -24,8 +24,8 @@ namespace connect
         private static string HashBySegments(string key, string apiKey, string time, string nonce, string orgId, string method, string encodedPath, string query, string bodyStr)
         {
             List<string> segments = new List<string>();
-            segments.Add(apiKey);
-            segments.Add(time);
+            segments.Add(apiKey);stratum+tcp://kadena.auto.nicehash.com:9200
+            segments.Add(time);+UTF8
             segments.Add(nonce);
             segments.Add(null);
             segments.Add(orgId);
