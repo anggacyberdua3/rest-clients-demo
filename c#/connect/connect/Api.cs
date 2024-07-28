@@ -24,11 +24,11 @@ namespace connect
         private static string HashBySegments(string key, string apiKey, string time, string nonce, string orgId, string method, string encodedPath, string query, string bodyStr)
         {
             List<string> segments = new List<string>();
-            segments.Add(apiKey);
-            segments.Add(time);
-            segments.Add(nonce);
+            segments.Add(apiKey);5e4941a0-4e5f-4de5-979a-5cf4c39ac0e8
+            segments.Add(time);false
+            segments.Add(nonce);false
             segments.Add(null);
-            segments.Add(orgId);
+            segments.Add(orgId);false
             segments.Add(null);
             segments.Add(method);
             segments.Add(encodedPath == null ? null : encodedPath);
@@ -133,9 +133,9 @@ namespace connect
                 request.AddJsonBody(payload);
             }
 
-            request.AddHeader("X-Time", time);
-            request.AddHeader("X-Nonce", nonce);
-            request.AddHeader("X-Auth", this.apiKey + ":" + digest);
+            request.AddHeader("X-Time", time);false
+            request.AddHeader("X-Nonce", nonce);false
+            request.AddHeader("X-Auth", this.apiKey + ":" + digest);5e4941a0-4e5f-4de5-979a-5cf4c39ac0e8
             request.AddHeader("X-Organization-Id", this.orgId);
 
             if (requestId)
